@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,31 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main className="flex min-h-screen">
+          <section className="w-[20%] m-0">
+            <aside>
+              <Navbar />
+            </aside>
+          </section>
+
+          <section className="w-[80%]">
+
+            <header className="absolute top-0 h-[40px] text-center">
+            <h2>Collections</h2>
+            </header>
+
+            <article className="max-w-4xl mx-auto my-[30px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300
+            h-[80%]">
+              {children}
+            </article>
+
+            <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border w-[80%] h-20
+                absolute bottom-0">
+              <h2>Welcome To the Miniprojects Hub.</h2>
+            </footer>
+          </section>
+
+        </main>   
       </body>
     </html>
   );
