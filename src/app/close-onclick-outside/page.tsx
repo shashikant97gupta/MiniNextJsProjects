@@ -9,7 +9,7 @@ const CloseOnOutsideClick = () => {
 
     useEffect(() => {
 
-        const handleClickOutside = (event: any) => {
+        const handleClickOutside = (event) => {
             console.log("openb", isopen, dropdownref, event.target, dropdownref.current)
 
             if(dropdownref.current && !dropdownref.current.contains(event.target)){
