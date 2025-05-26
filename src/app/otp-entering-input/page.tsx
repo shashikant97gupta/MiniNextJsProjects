@@ -6,8 +6,8 @@ import { ChangeEvent, useEffect, useRef, useState } from "react"
 const OTP_LENGTH = 4
 
 const OTPInput = () => {
-    const [otp, setOtp] = useState(Array(OTP_LENGTH).fill(""));
-    const [allFilled, setAllFilled] = useState<boolean>(false);
+    const [otp,] = useState(Array(OTP_LENGTH).fill(""));
+    const [allFilled,] = useState<boolean>(false);
     const [currentFocus, setCurrentFocus] = useState<number>(0);
     const [valueArr, setValueArr] = useState<(number|string)[]>([...otp]);
     const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -16,18 +16,18 @@ const OTPInput = () => {
       inputRefs.current[currentFocus]?.focus();
     }, [currentFocus]);
 
-    const handleInput = (e: ChangeEvent<HTMLInputElement> , indx: number) => {
-      // debugger
-      const value = e.target.value
-      if (!/^\d*$/.test(value)) return; 
-      const otpArr = [...valueArr]
-      otpArr[indx] = value
-      setValueArr(otpArr)
+    // const handleInput = (e: ChangeEvent<HTMLInputElement> , indx: number) => {
+    //   // debugger
+    //   const value = e.target.value
+    //   if (!/^\d*$/.test(value)) return; 
+    //   const otpArr = [...valueArr]
+    //   otpArr[indx] = value
+    //   setValueArr(otpArr)
 
-      if (value && indx < OTP_LENGTH - 1) {
-        setCurrentFocus(indx + 1);
-      }
-    }
+    //   if (value && indx < OTP_LENGTH - 1) {
+    //     setCurrentFocus(indx + 1);
+    //   }
+    // }
 
     const handleKeyDown = (e: React.KeyboardEvent, indx: number) => {
       // debugger

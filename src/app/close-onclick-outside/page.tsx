@@ -22,7 +22,7 @@ const CloseOnOutsideClick = () => {
         return (
             window.removeEventListener("click", toggler)
         )
-    }, [])
+    }, [isopen])
 
     const items: string[] = ['One', 'Two', 'Three']
     

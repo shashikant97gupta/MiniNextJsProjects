@@ -23,7 +23,7 @@ const FormValidation = () => {
 
 
     const handleOnChange = (e, field) => {
-        let value = e.target.value;
+        const value = e.target.value;
         switch (field) {
             case "name":
                 setFormData(prev => ({...prev, name: value}))                
