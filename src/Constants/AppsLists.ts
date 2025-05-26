@@ -10,4 +10,5 @@ export const app_list: AppList[] = [
     {path: "/inline-editable-input" , name: "Inline Editable Input" },
     {path: "/temperature-converter" , name: "Temperature Converter" },
     {path: "/otp-entering-input" , name: "OTP Entering Input" },
+    {path: "/form-validation" , name: "Form Validation" },
 ]
