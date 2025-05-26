@@ -37,19 +37,20 @@ export default function RootLayout({
 
           <section className="w-[80%]">
 
-            <header className="absolute top-0 h-[40px] text-center">
-            <h2>Collections</h2>
+            <header className="absolute top-0 h-[80px] w-[80%] gap-20 flex align-center justify-center">
+            <h2 className="text-center">Collections</h2>
+            <button></button>
             </header>
 
             <article className="max-w-4xl mx-auto my-[30px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300
             h-[80%]">
               {children}
             </article>
-
+{/* 
             <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border w-[80%] h-20
                 absolute bottom-0">
               <h2>Welcome To the Miniprojects Hub.</h2>
-            </footer>
+            </footer> */}
           </section>
 
         </main>   
